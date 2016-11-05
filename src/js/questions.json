@@ -11,7 +11,7 @@ jsoncallback({
     },
 
     {
-      "image"   : "../img/scenario1-1.png",
+      "image"   : "../img/scenario3-3.png",
       "question": "You're almost at the cinema! The cinema is on the other side so you'll have to cross the road. Where do you cross?",
       "answer1" : "I'll cross in front of the bus because it's closer and I'll get there faster!",
       "response1" : "BEEP!!! A driver honked his horn. Remember to cross where you aren't hidden by vehicles like cars or buses.",
