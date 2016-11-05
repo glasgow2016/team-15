@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+      <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <title>Brake</title>
+    </head>
+    <body>
+        <h1>Crossing The Road</h1>
+    </body>
+    <script>
+    $(document).ready(function(e) {
+      });
+       function jsoncallback(jsonObject){
+         for (var i = 0; i < jsonObject.Questions.length; i++) {
+            console.log("question: " + jsonObject.Questions[i].question);
+            console.log("answer1: " + jsonObject.Questions[i].Answer1);
+            if(jsonObject.Questions[i].Answer2 != undefined){
+              console.log("answer2: " + jsonObject.Questions[i].Answer2);
+            }
+          }
+       }
+    </script>
+    <script src="questions.json"></script>
+</html>
