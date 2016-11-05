@@ -8,9 +8,9 @@ jsoncallback({
       "answer1" : "I take off my headphones, look both ways and cross when
                    the road is clear",
       "response1" : "Well done! Taking your headphones off means you can hear cars coming and you can cross the road safely.",
-      "answer2" : "I keep my headphones on, look both ways and cross when the
-                   road is clear",
-      "response2" : "BEEP! A driver honked his horn. Remember to not listen to music and pay full attention when crossing to be safe."
+      "answer2" : "I keep my headphones on, look both ways and cross the road."
+      "response2" : "BEEP! A driver honked his horn. Remember to not listen to music because a car might come when you're not looking,
+                     so you need to use your ears to check that the road is safe too."
     },
 
     {
