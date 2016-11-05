@@ -3,15 +3,25 @@ jsoncallback({
 
     {
       "image"   : "path to image..",
-      "question":"Choose the safest route",
-      "Answer1" : "Cross at the pedestrian crosssing",
-      "Answer2" : "Cross the busy road",
+      "question":"You reach the zebra crossing, listening to your favourite
+                  song. How do you cross the road?",
+      "answer1" : "I take off my headphones, look both ways and cross when
+                   the road is clear",
+      "response1" : "Well done! Taking your headphones off means you can hear cars coming and you can cross the road safely.",
+      "answer2" : "I keep my headphones on, look both ways and cross when the
+                   road is clear",
+      "response2" : "BEEP! A driver honked his horn. Remember to not listen to music and pay full attention when crossing to be safe."
     },
 
     {
       "image"   : "path to image..",
-      "question": "Put on your seatbelt",
-      "Answer1" : "Plug in your seatbelt",
+      "question": "You're almost at the cinema! The cinema is on the other
+                   side so you'll have to cross the road. 
+                   Where do you cross?",
+      "answer1" : "I'll cross in front of the bus because it's closer and I'll get there faster!",
+      "response1" : "BEEP!!! A driver honked his horn. Remember to cross where you aren't hidden by vehicles like cars or buses."
+      "answer2" : "I'll walk a bit further to the zebra crossing.",
+      "response2" : "Well done! Crossing at the zebra crossing means that drivers can see you and stop to let you go.",
     }
   ]
 })
