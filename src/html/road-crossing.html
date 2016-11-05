@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+
       <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/crossRoad.css">
         <title>Brake</title>
-        <script>
-        $(document).ready(function(e) {
-          });
-
-           function jsoncallback(jsonObject){
-             for (var i = 0; i < jsonObject.Questions.length; i++) {
-                document.getElementById("question").innerHTML = jsonObject.Questions[i].question;
-                document.getElementById("ans1").innerHTML = jsonObject.Questions[i].answer1;
-                if(jsonObject.Questions[i].answer2 != undefined){
-                  document.getElementById("ans2").innerHTML = jsonObject.Questions[i].answer2;
-                }
-              }
-           }
-        </script>
     </head>
     <body>
-
         <h1>Crossing The Road</h1>
         <h3 id="question"></h3>
+        <img class="img-responsive" src="../../Scenarios/scenario1-1.png"width="700" height="550">
         <div class="btn-group btn-group-justified" role="group">
           <div  class="btn-group" role="group">
           <button id="ans1" type="button" value=""  class="btn btn-primary"></button>
@@ -32,5 +20,6 @@
        </div>
        </div>
     </body>
+    <script src="../js/testJsonJS.js"></script>
     <script src="../js/questions.json"></script>
 </html>
