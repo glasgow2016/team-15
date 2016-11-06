@@ -12,11 +12,11 @@ jsoncallback({
 
     {
        "image"   : "../img/scenario2-2.png",
-       "question":"You reach the zebra crossing, listening to your favourite song. How do you cross the road?",
-       "answer1" : "I take off my headphones, look both ways and cross when the road is clear",
-       "response2" : "Well done! Taking your headphones off means you can hear cars coming and you can cross the road safely.",
-       "answer2" : "I keep my headphones on, look both ways and cross the road.",
-       "response1" : "BEEP! A driver honked his horn. Remember to not listen to music because a car might come when you're not looking, so you need to use your ears to check that the road is safe too."
+       "question": "You meet your friend, and he says 'Come on! Lets Cross!' What do you do?",
+       "answer1" : "Tell your friend to wait until the green man appears",
+       "response2" : "Well done! You should help your friends be safe too!",
+       "answer2" : "Follow your friend across the road.",
+       "response1" : "BEEP! A driver honked his horn. Remember to only cross at pedestrian crossings when you can see the green man"
     },
 
     {
