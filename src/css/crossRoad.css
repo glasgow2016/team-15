@@ -1,4 +1,5 @@
 body{
+  background-image: url("../img/back.jpg");
   padding-left: 100px;
   padding-right:100px;
 }
@@ -7,4 +8,10 @@ img{
   display: block;
   margin-left: auto;
   margin-right: auto
+}
+
+
+
+.centerhead, .lateLine2, .late, .onTime, .homebutton {
+  text-align: center;
 }
