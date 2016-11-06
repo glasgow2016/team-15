@@ -4,8 +4,11 @@ body{
   padding-right:100px;
 }
 
-.title{
-  text-align: center;
+h1,h3{
+    font-family: Impact, Charcoal, sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
 }
 
 img{
@@ -23,4 +26,10 @@ img{
 
 .centerhead, .lateLine2, .late, .onTime, .homebutton {
   text-align: center;
+}
+
+#master {
+    position: relative;
+    top: 50%;
+    transform: translateY(+12%);
 }
