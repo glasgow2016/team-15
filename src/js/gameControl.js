@@ -10,6 +10,14 @@ function jsoncallback(jsonObject){
         update();  
 }
 
+function continueQuest(){
+    update();
+    $("#responseTile").hide();
+    $("#responseTile2").hide();
+    document.getElementById("ans1").style.visibility = 'visible';
+    document.getElementById("ans2").style.visibility = 'visible';
+}
+
 function update(){
     document.getElementById("question-img").src = questions[questionNum].image;
     document.getElementById("question").innerHTML = questions[questionNum].question;  
@@ -24,10 +32,9 @@ function update(){
 function rightAnswer(ele){
      
     questionNum += 1;  
-    document.getElementById("ans1").style.display = 'none';
-    document.getElementById("ans2").style.display = 'none';
- 	displayResponseBox(ele);       
-    update();
+    document.getElementById("ans1").style.visibility = 'hidden';
+    document.getElementById("ans2").style.visibility = 'hidden';
+ 	displayResponseBox(ele);
 }
 
 function wrongAnswer(eleId){
@@ -51,6 +58,3 @@ function displayResponseBox(eleId){
 function gameOver(){
     return false;
 }
-
-
-
