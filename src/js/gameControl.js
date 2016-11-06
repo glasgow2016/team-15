@@ -16,6 +16,18 @@ $('#myModal').on('hidden', function () {
 function continueQuest(){
 
     if(questionNum===questions.length){
+           displayResultsPage();
+    }
+    else {
+        update();
+        $("#responseTile").hide();
+        $("#responseTile2").hide();
+        document.getElementById("ans1").style.visibility = 'visible';
+        document.getElementById("ans2").style.visibility = 'visible';
+    }
+}
+
+function displayResultsPage(){
         var masterDiv = document.getElementById("master");
         while(masterDiv.hasChildNodes()){
             masterDiv.removeChild(document.getElementById("master").firstChild);
@@ -50,15 +62,9 @@ function continueQuest(){
         mainMenuButton.text = "Home";
         masterDiv.appendChild(mainMenuButton);
 
-    }
-    else {
-        update();
-        $("#responseTile").hide();
-        $("#responseTile2").hide();
-        document.getElementById("ans1").style.visibility = 'visible';
-        document.getElementById("ans2").style.visibility = 'visible';
-    }
+
 }
+
 function closeModal(){
     $('#myModal').modal('hide');
     $('#failModal').modal('hide');
