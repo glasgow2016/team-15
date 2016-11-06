@@ -16,26 +16,31 @@ function continueQuest(){
             masterDiv.removeChild(document.getElementById("master").firstChild);
         }
 
-        var header = document.createElement("h1");
-        header.appendChild(document.createTextNode("Summary"));
-        masterDiv.appendChild(header);
+        // var header = document.createElement("h1");
+        // header.className = "centerhead";
+        // header.appendChild(document.createTextNode("Summary"));
+        // masterDiv.appendChild(header);
 
         var timeLate = wrongAnswers * timeMultiplier;
 
-        var message = document.createElement("p");
+        var message = document.createElement("h2");
 
         if(timeLate == 0){
-            message.appendChild(document.createTextNode( "Well done you were on time !"));
+            message.className = "onTime";
+            message.appendChild(document.createTextNode("Well done you were on time !"));
             masterDiv.appendChild(message);
         }else{
+            message.className = "late";
             message.appendChild(document.createTextNode("Oh no ! you were " + timeLate + " minutes late !"));
             masterDiv.appendChild(message);
-            message = document.createElement("p");
+            message = document.createElement("h2");
+            message.className = "lateLine2";
             message.appendChild(document.createTextNode("Try again and plan a safer route !"));
             masterDiv.appendChild(message);
         }
 
         var mainMenuButton = document.createElement("a");
+        mainMenuButton.className = "homebutton";
         mainMenuButton.href = "homepage.html";
         mainMenuButton.text = "Home";
         masterDiv.appendChild(mainMenuButton);
@@ -70,7 +75,6 @@ function rightAnswer(ele){
 
 function wrongAnswer(eleId){
      wrongAnswers += 1;
-     //window.alert(wrongAnswers);
      displayResponseBox(eleId);
 }
 
@@ -99,4 +103,3 @@ function displayResponseBox(eleId){
 function gameOver(){
     return false;
 }
-
