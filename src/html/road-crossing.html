@@ -24,14 +24,13 @@
         <div id="response1" class="panel-body"></div>
       </div>
     </div>
-        <img class="img-responsive" src="../../Scenarios/scenario1-1.png"width="700" height="550">
         <img id="question-img" class="img-responsive" src="" width="700" height="550">
         <div class="btn-group btn-group-justified" role="group">
           <div  class="btn-group" role="group">
-          <button id="ans1" type="button" value=""  class="btn btn-primary"></button>
+          <button id="ans1" type="button" value=""  class="btn btn-primary" onclick="rightAnswer(this.id);"></button>
        </div>
        <div class="btn-group" role="group">
-         <button id="ans2"  type="button" value="" class="btn btn-primary"></button>
+         <button id="ans2"  type="button" value="" class="btn btn-primary" onclick="wrongAnswer(this.id);"></button>
        </div>
        </div>
        <script>
@@ -39,7 +38,6 @@
          $("#responseTile2").hide();
        </script>
     </body>
-    <script src="../js/validateAnswer.js"></script>
-    <script src="../js/loadJson.js"></script>
+    <script src="../js/gameControl.js"></script>
     <script src="../js/questions.json"></script>
 </html>
