@@ -3,10 +3,10 @@ function jsoncallback(jsonObject){
         document.getElementById("question-img").src = jsonObject.Questions[i].image;
         document.getElementById("question").innerHTML = jsonObject.Questions[i].question;
         document.getElementById("ans1").innerHTML = jsonObject.Questions[i].answer1;
-        document.getElementById("response1").innerHTML = jsonObject.Questions[i].response2;
+        document.getElementById("response1").innerHTML = jsonObject.Questions[i].response1;
         if(jsonObject.Questions[i].answer2 != undefined){
           document.getElementById("ans2").innerHTML = jsonObject.Questions[i].answer2;
-          document.getElementById("response2").innerHTML = jsonObject.Questions[i].response1;
+          document.getElementById("response2").innerHTML = jsonObject.Questions[i].response2;
         }
       }
     }
