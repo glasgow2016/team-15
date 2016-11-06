@@ -9,7 +9,12 @@ function jsoncallback(jsonObject){
     update();
 }
 
+$('#myModal').on('hidden', function () {
+    continueQuest();
+})
+
 function continueQuest(){
+
     if(questionNum===questions.length){
         var masterDiv = document.getElementById("master");
         while(masterDiv.hasChildNodes()){
@@ -54,15 +59,31 @@ function continueQuest(){
         document.getElementById("ans2").style.visibility = 'visible';
     }
 }
+function closeModal(){
+    $('#myModal').modal('hide');
+    $('#failModal').modal('hide');
+}
+
+function showModal() {
+
+  $('#myModal').modal('show');
+
+}
+
+function showFailModal() {
+
+  $('#failModal').modal('show');
+
+}
 
 function update(){
     document.getElementById("question-img").src = questions[questionNum].image;
     document.getElementById("question").innerHTML = questions[questionNum].question;
     document.getElementById("ans1").innerHTML = questions[questionNum].answer1;
-    document.getElementById("response1").innerHTML = questions[questionNum].response1;
+    document.getElementById("goodcontent").innerHTML = questions[questionNum].response2;
     if(questions[questionNum].answer2 != undefined){
         document.getElementById("ans2").innerHTML = questions[questionNum].answer2;
-        document.getElementById("response2").innerHTML = questions[questionNum].response2;
+        document.getElementById("badcontent").innerHTML = questions[questionNum].response1;
     }
 }
 
@@ -70,12 +91,12 @@ function rightAnswer(ele){
     questionNum += 1;
     document.getElementById("ans1").style.visibility = 'hidden';
     document.getElementById("ans2").style.visibility = 'hidden';
- 	  displayResponseBox(ele);
+ 	  //displayResponseBox(ele);
 }
 
 function wrongAnswer(eleId){
      wrongAnswers += 1;
-     displayResponseBox(eleId);
+    //  displayResponseBox(eleId);
 }
 
 function getTime() {

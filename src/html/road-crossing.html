@@ -21,17 +21,32 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Modal Header</h4>
               <div class="modal-body">
-                <p>well done<i class="fa fa-check fa-5x" aria-hidden="true"></i></p>
+                <p>Well Done <i class="fa fa-check fa-5x" aria-hidden="true"></i></p>
+                <p id="goodcontent"></p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="btnCon" class="btn btn-default btn-md" onclick="closeModal();continueQuest()" type="button">Continue</button>
+                <button type="button" class="btn btn-default" onclick="closeModal()">Close</button>
               </div>
             </div>
           </div>
         </div>
-
+        <div id="failModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <div class="modal-body">
+                <p>Not Quite <i class="fa fa-times fa-3x" aria-hidden="true"></i></p>
+                <p id="badcontent"></p>
+              </div>
+              <div class="modal-footer">
+                <button id="btnCon" class="btn btn-default btn-md" onclick="closeModal();continueQuest()" type="button">Continue</button>
+                <button type="button" class="btn btn-default" onclick="closeModal()">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="responseTile">
           <div class="panel panel-success">
             <div class="panel-heading">Well Done !</div>
@@ -52,10 +67,10 @@
         <img id="question-img" class="img-rounded" isrc="" width="700" height="550">
         <div id="buttonGroup" class="btn-group btn-group-justified" role="group">
           <div  class="btn-group" role="group">
-          <button id="ans1" type="button" value=""  class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal"></button>
+          <button id="ans1" type="button" value=""  class="btn btn-warning btn-lg" onclick="rightAnswer(this.id);showModal()" ></button>
        </div>
        <div class="btn-group" role="group">
-         <button id="ans2"  type="button" value="" class="btn btn-warning btn-lg" onclick="wrongAnswer(this.id);"></button>
+         <button id="ans2"  type="button" value="" class="btn btn-warning btn-lg" onclick="wrongAnswer(this.id);showFailModal()"></button>
        </div>
        </div>
        <script>
