@@ -6,5 +6,7 @@ $(document).ready(function(){
     $("#ans2").click(function(){
        $("#responseTile2").hide();
        $("#responseTile").show();
+        $("#ans1").prop("disabled",true);
+        $("#ans2").prop("disabled",true);
     });
 });
