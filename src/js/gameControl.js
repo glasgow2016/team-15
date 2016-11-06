@@ -1,5 +1,5 @@
 var wrongAnswers = 0;
-let timeMultiplier = 5;
+var timeMultiplier = 5;
 var questionNum = 0;
 var questions;
 
@@ -10,11 +10,44 @@ function jsoncallback(jsonObject){
 }
 
 function continueQuest(){
-    update();
-    $("#responseTile").hide();
-    $("#responseTile2").hide();
-    document.getElementById("ans1").style.visibility = 'visible';
-    document.getElementById("ans2").style.visibility = 'visible';
+    if(questionNum===questions.length){
+        var masterDiv = document.getElementById("master");
+        while(masterDiv.hasChildNodes()){
+            masterDiv.removeChild(document.getElementById("master").firstChild);
+        }
+
+        var header = document.createElement("h1");
+        header.appendChild(document.createTextNode("Summary"));
+        masterDiv.appendChild(header);
+
+        var timeLate = wrongAnswers * timeMultiplier;
+
+        var message = document.createElement("p");
+
+        if(timeLate == 0){
+            message.appendChild(document.createTextNode( "Well done you were on time !"));
+            masterDiv.appendChild(message);
+        }else{
+            message.appendChild(document.createTextNode("Oh no ! you were " + timeLate + " minutes late !"));
+            masterDiv.appendChild(message);
+            message = document.createElement("p");
+            message.appendChild(document.createTextNode("Try again and plan a safer route !"));
+            masterDiv.appendChild(message);
+        }
+
+        var mainMenuButton = document.createElement("a");
+        mainMenuButton.href = "homepage.html";
+        mainMenuButton.text = "Home";
+        masterDiv.appendChild(mainMenuButton);
+
+    }
+    else {
+        update();
+        $("#responseTile").hide();
+        $("#responseTile2").hide();
+        document.getElementById("ans1").style.visibility = 'visible';
+        document.getElementById("ans2").style.visibility = 'visible';
+    }
 }
 
 function update(){
@@ -30,8 +63,8 @@ function update(){
 
 function rightAnswer(ele){
     questionNum += 1;
-    document.getElementById("ans1").style.display = 'none';
-    document.getElementById("ans2").style.display = 'none';
+    document.getElementById("ans1").style.visibility = 'hidden';
+    document.getElementById("ans2").style.visibility = 'hidden';
  	  displayResponseBox(ele);
 }
 
@@ -42,9 +75,9 @@ function wrongAnswer(eleId){
 }
 
 function getTime() {
-  // var timeLate = wrongAnswers * timeMultiplier;
-  var timeLate = 25;
-  if(timeLate != 0){
+  var timeLate = wrongAnswers * timeMultiplier;
+
+  if(timeLate == 0){
     document.getElementById("hidden").innerHTML = "Well done you were on time !";
   }else{
     document.getElementById("hidden").innerHTML = "Oh no ! you were " + timeLate + " minutes late !";
